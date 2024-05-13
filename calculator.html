@@ -1,0 +1,60 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+<table border="2">
+<tr>
+<td colspan="4"><input type="text" id="display" disabled></td>
+</tr>
+<tr>
+<td><button onclick="reset()">C</button> </td>
+<td><button onclick="addvalue('0')">0</button> </td>
+<td><button onclick="addvalue('/')">/</button> </td>
+<td><button onclick="addvalue('*')">*</button> </td>
+</tr>
+<tr>
+<td><button onclick="addvalue('7')">7</button> </td>
+<td><button onclick="addvalue('8')">8</button> </td>
+<td><button onclick="addvalue('9')">9</button> </td>
+<td><button onclick="addvalue('-')">-</button> </td>
+</tr>
+<tr>
+<td><button onclick="addvalue('4')">4</button> </td>
+<td><button onclick="addvalue('5')">5</button> </td>
+<td><button onclick="addvalue('6')">6</button> </td>
+<td><button onclick="addvalue('+')">+</button> </td>
+</tr>
+<tr>
+<td><button onclick="addvalue('1')">1</button> </td>
+<td><button onclick="addvalue('2')">2</button> </td>
+<td><button onclick="addvalue('3')">3</button> </td>
+<td><button onclick="calculat()">=</button> </td>
+</tr>
+
+</table>
+
+<script type="text/javascript">
+function addvalue(value)
+{
+	document.getElementById("display").value += value;
+}
+
+function  reset()
+{
+	document.getElementById("display").value ="";
+}
+function calculat()
+{
+	document.getElementById("display").value =eval(document.getElementById("display").value);
+}
+
+
+
+</script>
+
+
+</body>
+</html>
