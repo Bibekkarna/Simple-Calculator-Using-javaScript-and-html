@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<title>Advance Calculator</title>
+</head>
+
+<body>
+<table border="2">
+<tr>
+<td colspan ="4"> <input type="text" id="display" disabled></td>
+</tr>
+<tr>
+<td><button onclick="addvalue('00')">00</button></td>
+<td><button onclick="remove('DE')">DE</button></td>
+<td><button onclick="addvalue('.')">.</button></td>
+<td> <button onclick="fact('!')">!</button></td>
+</tr>
+<tr>
+<td> <button onclick="addvalue('0')">0</button></td>
+<td><button onclick="reset('C')">C</button></td>
+<td><button onclick="addvalue('/')">/</button></td>
+<td><button onclick="addvalue('*')">*</button></td>
+</tr>
+<tr>
+<td onclick="addvalue('7')">7</td>
+<td onclick="addvalue('8')">8</td>
+<td onclick="addvalue('9')">9</td>
+<td onclick="addvalue('-')">-</td>
+</tr>
+<tr>
+<td onclick="addvalue('4')">4</td>
+<td onclick="addvalue('5')">5</td>
+<td onclick="addvalue('6')">6</td>
+<td onclick="addvalue('+')">+</td>
+</tr>
+<tr>
+<td onclick="addvalue('1')">1</td>
+<td onclick="addvalue('2')">2</td>
+<td onclick="addvalue('3')">3</td>
+<td><button onclick="calculate('=')">=</button></td>
+</tr>
+</table>
+<script type="text/javascript">
+
+function addvalue(value)
+{
+document.getElementById("display").value+=value;
+}
+function calculate(value)
+{
+document.getElementById("display").value=eval(document.getElementById("display").value);
+}
+function reset()
+{
+document.getElementById("display").value="";
+}
+function remove (value)
+{
+document.getElementById("display").value= document.getElementById("display").value.toString().slice(0,-1);
+}
+function fact(value)
+{
+var i,num,f;
+f=1;
+num=document.getElementById("display").value;
+for(i=1;i<=num;i++)
+{
+f = f*i;
+}
+i=i-1;
+document.getElementById("display").value=f;
+}
+</script>
+</body>
+
+</html>
